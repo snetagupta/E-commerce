@@ -11,11 +11,12 @@ function SampleNextArrow(props) {
   const { className, style, onClick } = props;
   return (
     <div
-     
-      onClick={onClick}>
-         <IoIosArrowForward/>
-      </div>
-    
+      className={className}
+      style={{ ...style, display: "block", background: "gray" }}
+      onClick={onClick}
+    >
+      <IoIosArrowForward />
+    </div>
   );
 }
 
@@ -25,10 +26,10 @@ function SamplePrevArrow(props) {
     <div
       className={className}
       style={{ ...style, display: "block", background: "gray" }}
-      onClick={onClick}>
-       
-        <IoIosArrowBack/>
-      </div>
+      onClick={onClick}
+    >
+      <IoIosArrowBack />
+    </div>
   );
 }
 
@@ -50,7 +51,7 @@ const ProductSection = () => {
         // Show right arrow
         document.querySelector(".slick-next").style.display = "block";
       }
-  
+
       // Check if next slide is the first one
       if (next === 0) {
         // Hide left arrow
@@ -61,7 +62,7 @@ const ProductSection = () => {
       }
     },
   };
-  
+
   return (
     <>
       <div className="px-20">
