@@ -4,7 +4,7 @@ const LogIn = () => {
   return (
     <>
       <div className="bg-gray-400 p-20 flex justify-center border">
-        <div className="bg-white flex flex-col items-center gap-6 max-w-fit p-6">
+        <div className="bg-white flex flex-col items-center gap-6 max-w-fit p-12 rounded-md">
           <p>HariHarStore</p>
           <p>Sign in</p>
           <div class="relative flex items-center py-4">

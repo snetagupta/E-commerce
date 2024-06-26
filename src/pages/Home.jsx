@@ -8,12 +8,12 @@ import ProductSection from "../components/ProductSection";
 const Home = () =>{
     return(
         <>
-        <NavBar/>
+      
         <Ad/>
         <Cards/>
         <Categories/>
         <ProductSection/>
-        <Footer/>
+       
         </>
     )
 }

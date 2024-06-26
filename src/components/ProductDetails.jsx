@@ -4,8 +4,8 @@ const ProductDetails = () => {
   return (
     <>
       <div className="px-20 flex w-full">
-        <div className=" w-[70%] p-10">
-          <div className="border-r border-b p-24" >
+        <div className=" w-[70%] p-10 overflow-y-scroll scrollbar-hide h-screen">
+          <div className="border-r border-b p-24 "  >
           <img
             className="w-[400px]"
             src="https://minutebag.com/wp-content/uploads/2018/04/butter_cream_1100_1-1024x1024.jpg"
