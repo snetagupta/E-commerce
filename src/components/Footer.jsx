@@ -1,6 +1,6 @@
 import { RiFacebookCircleFill } from "react-icons/ri";
-import {  FaSquareInstagram, FaSquareThreads } from "react-icons/fa6";
-import { FaFacebookSquare ,FaLinkedin,FaTwitterSquare } from "react-icons/fa";
+import { FaSquareInstagram, FaSquareThreads } from "react-icons/fa6";
+import { FaFacebookSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 import { AiFillTwitterCircle } from "react-icons/ai";
 
 const Footer = () => {
@@ -10,10 +10,10 @@ const Footer = () => {
         <div className="flex justify-start gap-16">
           <div>
             <div>
-              <p className="text-2xl font-bold">Useful Links</p>
+              <p className="text-lg font-semibold">Useful Links</p>
             </div>
-            <div className="flex items-center justify-between gap-24 mt-6">
-              <div className="flex flex-col gap-1 text-gray-600">
+            <div className="flex items-center justify-between gap-24 mt-6 text-gray-500 text-[14.5px]">
+              <div className="flex flex-col gap-2">
                 <p>About</p>
                 <p>Careers</p>
                 <p>Blog</p>
@@ -21,7 +21,7 @@ const Footer = () => {
                 <p>Lead</p>
                 <p>Value</p>
               </div>
-              <div className="flex flex-col gap-1 text-gray-600">
+              <div className="flex flex-col gap-2">
                 <p>Privacy</p>
                 <p>Terms</p>
                 <p>FAQs</p>
@@ -29,7 +29,7 @@ const Footer = () => {
                 <p>Mobile</p>
                 <p>Contact</p>
               </div>
-              <div className="flex flex-col gap-1 text-gray-600">
+              <div className="flex flex-col gap-2">
                 <p>Partner</p>
                 <p>Express</p>
                 <p>Seller</p>
@@ -41,11 +41,11 @@ const Footer = () => {
           </div>
           <div>
             <div className="flex items-center justify-start gap-4">
-              <p className="text-2xl font-bold">Categories</p>
-              <p className="text-green-400">See All</p>
+              <p className="text-lg font-semibold">Categories</p>
+              <p className="text-green-700 ">See All</p>
             </div>
-            <div className="flex items-center justify-between gap-28 mt-6">
-              <div className="flex flex-col gap-1 text-gray-600">
+            <div className="flex items-center justify-between gap-28 mt-6 text-gray-500 text-[14.5px]">
+              <div className="flex flex-col gap-2 ">
                 <p>Vegetables & Fruits</p>
                 <p>Cold Drinks & Juices</p>
                 <p>Bakery & Biscuits</p>
@@ -56,7 +56,7 @@ const Footer = () => {
                 <p>Beauty & Cosmetics</p>
                 <p>Print Store</p>
               </div>
-              <div className="flex flex-col gap-1 text-gray-600">
+              <div className="flex flex-col gap-2 ">
                 <p>Dairy & Breakfast</p>
                 <p>Instant & Frozen Food</p>
                 <p>Sweet Tooth</p>
@@ -66,7 +66,7 @@ const Footer = () => {
                 <p>Personal Care</p>
                 <p>Books</p>
               </div>
-              <div className="flex flex-col gap-1 text-gray-600">
+              <div className="flex flex-col gap-2">
                 <p>Munchies</p>
                 <p>Tea, Coffee & Health Drinks</p>
                 <p>Atta, Rice & Dal</p>
@@ -100,15 +100,15 @@ const Footer = () => {
             </div>
           </div>
           <div className="flex items-center justify-between gap-4 text-5xl">
-          <FaFacebookSquare />
-            <FaTwitterSquare/>
+            <FaFacebookSquare />
+            <FaTwitterSquare />
             <FaSquareInstagram />
             <FaLinkedin />
             <FaSquareThreads />
           </div>
         </div>
         <div className="mt-6 px-4">
-          <p className="text-gray-600">
+          <p className="text-gray-500">
             “Blinkit” is owned & managed by "Blink Commerce Private Limited"
             (formerly known as Grofers India Private Limited) and is not
             related, linked or interconnected in whatsoever manner or nature, to
