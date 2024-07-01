@@ -57,7 +57,7 @@ const ProductSection = () => {
         >
           <IoIosArrowForward size={24} />
         </button>
-        <Slider ref={sliderRef} {...settings} className="ml-10">
+        <Slider ref={sliderRef} {...settings} >
           {products.map((product, index) => (
             <div key={index} className="flex items-center justify-between">
               <ProductCard product={product} />

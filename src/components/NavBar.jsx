@@ -12,13 +12,13 @@ const NavBar = () => {
   return (
     <>
       <div className="flex items-center justify-between px-12 py-4 gap-20 border-b-2">
-        <h1 className="text-4xl font-bold text-yellow-400">
+        <h1 className="text-3xl font-extrabold text-yellow-400">
           HariHar<span className="text-green-600">Store</span>
         </h1>
 
         <div className="text-lg">
           <p className="font-bold">Delivery in 8 minutes</p>
-          <p className="flex items-center gap-2">
+          <p className="flex items-center gap-2 text-sm">
             Dabra,India
             <IoMdArrowDropdown />
           </p>
@@ -28,17 +28,18 @@ const NavBar = () => {
           <input
             type="text"
             placeholder="Search"
-            className="bg-gray-100 text-black "
+            className="bg-gray-100 text-black w-full border-none outline-none"
           />
         </div>
         <div className="flex items-center justify-between gap-12 text-xl">
           {logedIn ? (
             <div className="relative">
               <button
-                className="text-green-600 text-[18px]"
+                className="text-gray-700 text-[18px] flex items-center gap-1"
                 onClick={handleToggle}
               >
                 Account
+                <IoMdArrowDropdown className="text-[22px]"/>
               </button>
               {toggle && (
                 <div className="absolute bottom-[-220px] left-[-50px] bg-white px-5 py-3 text-[15px] text-gray-500 flex flex-col gap-3 shadow-lg rounded-md w-[200px]">
@@ -53,11 +54,11 @@ const NavBar = () => {
               )}
             </div>
           ) : (
-            <button className="text-green-600">Login</button>
+            <button className="text-gray-600 text-[18px]">Login</button>
           )}
-          <button className="bg-green-600 text-white px-4 py-2 rounded-md flex items-center gap-2">
-            <TbShoppingCart className="text-white" />
-            Cart
+          <button className="bg-green-700 text-white px-3 py-3 rounded-md flex items-center gap-2">
+            <TbShoppingCart className="text-white text-[25px]" />
+            <p className="text-sm font-bold">My Cart</p>
           </button>
         </div>
       </div>
