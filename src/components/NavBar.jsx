@@ -11,7 +11,7 @@ const NavBar = () => {
   };
   return (
     <>
-      <div className="flex items-center justify-between px-12 py-4 gap-20 border-b-2">
+      <div className="flex items-center justify-between px-12 py-4 gap-20 border-b-2 ">
         <h1 className="text-3xl font-extrabold text-yellow-400">
           HariHar<span className="text-green-600">Store</span>
         </h1>

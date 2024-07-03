@@ -4,17 +4,17 @@ import { GrFormSubtract } from "react-icons/gr";
 const CardCart = ({ product }) => {
   return (
     <>
-      <div className="px-6 py-4 flex gap-8 border-b">
+      <div className="px-6 py-4 flex gap-8 border-b my-2">
         <div className="flex flex-col gap-5 ">
           <div>
             <img className="w-[100px] h-[100px] object-contain" src={product.image} />
           </div>
           <div className="flex items-center gap-2">
-            <div className=" border border-blue-950 rounded-full p-1">
+            <div className=" border border-gray-400 rounded-full p-1">
               <GrFormSubtract className=" " />
             </div>
-            <p className="border  border-blue-950 px-5 ">1</p>
-            <div className=" border rounded-full  border-blue-950 p-1">
+            <p className="border  border-gray-400 px-5 ">1</p>
+            <div className=" border rounded-full  border-gray-400 p-1">
               <IoIosAdd />
             </div>
           </div>

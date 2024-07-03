@@ -5,12 +5,12 @@ const Cart = () => {
   return (
     <>
       <div className="px-24 py-8 flex gap-4 bg-slate-200 border rounded-md">
-        <div className="bg-white w-[70%] ">
+        <div className="bg-white w-[70%] relative">
           {cartProducts.map((product, index) => (
             <CardCart key={index} product={product} />
           ))}
           <div className="p-6 flex justify-end shadow-2xl ">
-            <button className="text-white bg-green-600 py-3 px-20 ">PLACE ORDER</button>
+            <button className="text-white bg-green-600 py-3 px-20 sticky top-0">PLACE ORDER</button>
           </div>
         </div>
         <div className="bg-white w-[30%] px-6 py-4 h-[400px] flex flex-col gap-6">
