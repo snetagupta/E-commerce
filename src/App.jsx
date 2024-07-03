@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar"
 import Footer from "./components/Footer"
 import Cart from "./pages/Cart"
 import Register from "./pages/Register"
+import Payment from "./pages/Payment"
 
 
 const App =()=> {
@@ -24,6 +25,7 @@ const App =()=> {
       <Route path="/login" element={<LogIn/>}/>
       <Route path="/cart" element={<Cart/>}/>
       <Route path="/register" element={<Register/>}/>
+      <Route path="/payment" element={<Payment/>}/>
     </Routes>
     <Footer/>
     </BrowserRouter>

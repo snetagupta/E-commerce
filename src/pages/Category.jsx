@@ -7,8 +7,8 @@ const Category = () => {
   return (
     <>
       <div className="px-20 py-4">
-        <div className="shadow-md ">
-          <div className="flex items-center justify-between text-gray-400 ">
+        <div className="shadow-md relative">
+          <div className="flex items-center justify-between text-gray-400 fixed top-20 left-0 right-0 ">
             <p>Vegetables & Fruits</p>
             <p>Dairy & Breakfast</p>
             <p>Munchies</p>

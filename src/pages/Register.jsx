@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 const Register = () => {
   return (
     <>
-      <div className="bg-gray-300 flex justify-center h-screen p-14">
+      <div className="bg-gray-200 flex justify-center h-screen p-14">
         <div className="bg-white p-12 h-fit flex flex-col gap-8 rounded-md">
-          <p className="text-center font-extrabold text-2xl">Create Account</p>
+          <p className="text-center font-bold text-3xl">Create Account</p>
           <div className="w-[350px]">
             <input type="text" placeholder="Name" className="w-full border p-1" />
           </div>
