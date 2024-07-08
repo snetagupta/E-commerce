@@ -10,7 +10,8 @@ const CustomInput = ({
 }) => {
   return (
     <div className="flex flex-col gap-2">
-      <label>{label}</label>
+    
+    {label && <label>{label}</label>}
       <input
         type={type}
         placeholder={placeholder}
