@@ -67,7 +67,7 @@ const Register = () => {
           >
             Register
           </button>
-          <div className="flex justify-center mt-8">
+          <div className="flex justify-center mt-2">
             <p className="">Have already an account?</p>
             <Link to="/login" className="font-bold">
               Login here
