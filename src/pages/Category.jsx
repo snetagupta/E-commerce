@@ -8,7 +8,7 @@ const Category = () => {
     <>
       <div className="px-20 py-4">
         <div className="shadow-md relative">
-          <div className="flex items-center justify-between text-gray-400 fixed top-20 left-0 right-0 ">
+          <div className="flex items-center justify-between text-gray-400 fixed top-20 left-0 right-0 shadow-md border-l border-r border-b py-2">
             <p>Vegetables & Fruits</p>
             <p>Dairy & Breakfast</p>
             <p>Munchies</p>
@@ -23,7 +23,7 @@ const Category = () => {
           </div>
         </div>
 
-        <div className="mt-4 flex justify-between">
+        <div className="mt-8 flex justify-between">
           <div>
             {vegetables.map((vegetable, index) => (
               <div

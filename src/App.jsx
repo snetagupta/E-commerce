@@ -8,6 +8,8 @@ import Footer from "./components/Footer"
 import Cart from "./pages/Cart"
 import Register from "./pages/Register"
 import Payment from "./pages/Payment"
+import Profile from "./pages/Profile"
+import Create from "./pages/Create"
 
 
 const App =()=> {
@@ -26,6 +28,8 @@ const App =()=> {
       <Route path="/cart" element={<Cart/>}/>
       <Route path="/register" element={<Register/>}/>
       <Route path="/payment" element={<Payment/>}/>
+      <Route path="/profile" element={<Profile/>}/>
+      <Route path="/create" element={<Create/>}/>
     </Routes>
     <Footer/>
     </BrowserRouter>
