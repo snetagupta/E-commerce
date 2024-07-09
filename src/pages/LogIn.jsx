@@ -14,6 +14,10 @@ const LogIn = () => {
   const handleSubmit =(e)=>{
    e.preventDefault();
    console.log(logInData)
+   setLogInData({
+    email:"",
+    password:"",
+  })
   }
   return (
     <>

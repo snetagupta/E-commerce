@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 import CustomInput from "../components/CustomInput";
 import { useState } from "react";
+import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const Register = () => {
   const [registerData, setRegisterData] = useState({
@@ -17,6 +20,25 @@ const Register = () => {
   const handleRegister = (e) => {
     e.preventDefault();
     console.log(registerData);
+    setRegisterData({
+      name: "",
+      email: "",
+      password: "",
+      repeatPassword: "",
+    })
+     const data ={
+      name:registerData.name,
+      email:registerData.email,
+      password:registerData.password,
+     }
+    axios.post("http://localhost:3000/api/users",data)
+    .then((response) =>{
+      toast(response.data.message)
+    })
+   .catch((error) => {
+    toast(error.response.data.message)
+   })
+
   };
   return (
     <>
@@ -75,6 +97,7 @@ const Register = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };
