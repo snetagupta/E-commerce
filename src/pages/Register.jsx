@@ -19,28 +19,30 @@ const Register = () => {
   };
   const handleRegister = (e) => {
     e.preventDefault();
-    console.log(registerData);
 
-    const data = {
-      name: registerData.name,
-      email: registerData.email,
-      password: registerData.password,
-    };
-    axios
-      .post("http://localhost:3000/api/users", data)
-      .then((response) => {
-        toast(response.data.message);
-        setRegisterData({
-          name: "",
-          email: "",
-          password: "",
-          repeatPassword: "",
-        });
-      })
-      .catch((error) => {
-        toast(error.response.data.message);
+    try {
+      const formData = {
+        name: registerData.name,
+        email: registerData.email,
+        password: registerData.password,
+      };
+
+      const { data } = axios.post(
+        "http://localhost:3000/api/users/register",
+        formData
+      );
+      toast(data.message);
+      setRegisterData({
+        name: "",
+        email: "",
+        password: "",
+        repeatPassword: "",
       });
+    } catch (error) {
+      toast(error.response.data.message);
+    }
   };
+
   return (
     <>
       <div className="bg-gray-200 flex justify-center h-screen p-14">
