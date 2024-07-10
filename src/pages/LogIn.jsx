@@ -1,6 +1,10 @@
 import { useState } from "react";
 import { FcGoogle } from "react-icons/fc";
 import CustomInput from "../components/CustomInput";
+import axios from "axios";
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 
 const LogIn = () => {
   const[logInData,setLogInData] = useState({
@@ -14,10 +18,22 @@ const LogIn = () => {
   const handleSubmit =(e)=>{
    e.preventDefault();
    console.log(logInData)
+  
+  const data ={
+    email:logInData.email,
+    password:logInData.password,
+  }
+  axios.post("http://localhost:3000/api/users/login",data)
+  .then((response) =>{
+   toast(response.data.message)
    setLogInData({
     email:"",
     password:"",
   })
+  }).catch((error) =>{
+    toast(error.response.data.message)
+  })
+  
   }
   return (
     <>
@@ -54,6 +70,7 @@ const LogIn = () => {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 };
