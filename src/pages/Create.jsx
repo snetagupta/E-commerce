@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CustomInput from "../components/CustomInput";
+import { IoMdAdd } from "react-icons/io";
 
 const Create = () => {
   const [productData, setProductData] = useState({
@@ -9,29 +10,34 @@ const Create = () => {
     category: "",
     brand: "",
     stock: "",
-    tags: [],
     thumbnail: null,
     images: [],
   });
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setProductData({...productData,[name]:value})
-   
+    setProductData({ ...productData, [name]: value });
   };
-  const handleSubmit =(e) =>{
+  const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(productData)
-
-  }
+    console.log(productData);
+  };
   return (
     <>
       <div className="flex flex-col items-center justify-center mx-40 px-10 py-10 gap-8">
         <div className="w-[600px]">
-          <div className="w-full h-40 border bg-gray-300 border-green-500 rounded-md"></div>
+          <div className="w-full h-40 border bg-gray-200 border-green-500 rounded-md flex justify-center items-center">
+            <IoMdAdd className="text-6xl text-gray-400" cursor={"pointer"}/>
+          </div>
           <div className="flex gap-8 mt-4">
-            <div className="w-[30%] h-40 border  bg-gray-300 border-green-500 rounded-md"></div>
-            <div className="w-[30%] h-40 border  bg-gray-300 border-green-500 rounded-md"></div>
-            <div className="w-[30%] h-40 border  bg-gray-300 border-green-500 rounded-md"></div>
+            <div className="w-[30%] h-40 border  bg-gray-200 border-green-500 rounded-md flex justify-center items-center">
+              <IoMdAdd className="text-6xl text-gray-400" cursor={"pointer"}/>
+            </div>
+            <div className="w-[30%] h-40 border  bg-gray-200 border-green-500 rounded-md flex justify-center items-center">
+              <IoMdAdd className="text-6xl text-gray-400" cursor={"pointer"}/>
+            </div>
+            <div className="w-[30%] h-40 border  bg-gray-200 border-green-500 rounded-md flex justify-center items-center">
+              <IoMdAdd className="text-6xl text-gray-400" cursor={"pointer"}/>
+            </div>
           </div>
         </div>
         <div className="flex gap-20">
@@ -82,8 +88,10 @@ const Create = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="border h-20 w-[600px] rounded-md border-red-800"></div>
-        <button className="bg-green-600 text-white py-1 px-10 rounded-md" onClick={handleSubmit}>
+        <button
+          className="bg-green-600 text-white py-1 px-10 rounded-md"
+          onClick={handleSubmit}
+        >
           Submit
         </button>
       </div>
