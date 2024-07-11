@@ -14,7 +14,7 @@ const LogIn = () => {
     const { name, value } = e.target;
     setLogInData({ ...logInData, [name]: value });
   };
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
@@ -22,17 +22,17 @@ const LogIn = () => {
         email: logInData.email,
         password: logInData.password,
       };
-      const { data } = axios.post(
+      const { data } =await axios.post(
         "http://localhost:3000/api/users/login",
         formData
       );
-      toast(data.message);
+      toast(data.message, { type: "success" });
       setLogInData({
         email: "",
         password: "",
       });
     } catch (error) {
-      toast(error.response.data.message);
+      toast(error.response.data.message, { type: "error" });
     }
   };
   return (
@@ -63,7 +63,7 @@ const LogIn = () => {
             />
           </div>
           <button
-            className="border bg-green-500 text-white w-[300px] py-2 px-2 rounded-md text-xs"
+            className="border bg-green-500 text-white w-[300px] mt-4 py-2 px-2 rounded-md text-xs"
             onClick={handleSubmit}
           >
             CONTINUE

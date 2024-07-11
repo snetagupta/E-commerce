@@ -1,5 +1,6 @@
 import { useState } from "react";
 import CustomInput from "../components/CustomInput";
+import axios from "axios";
 
 const Profile = () => {
   const [data, setData] = useState({
@@ -19,21 +20,40 @@ const Profile = () => {
     setData({ ...data, [name]: value });
     
   };
-  const handleUpdate =(e) =>{
+  const handleUpdate = async(e) =>{
    e.preventDefault();
    console.log(data)
-   setData({
-    name: "",
-    email: "",
-    phoneNumber: "",
-    userType: "",
-    state: "",
-    city: "",
-    street: "",
-    building: "",
-    houseNumber: "",
-    pinCode: "",
-  })
+  
+   try {
+    const profileData={
+      name:data.name,
+      email:data.email,
+      phoneNumber:data.phoneNumber,
+      userType:data.userType,
+      state:data.state,
+      city:data.city,
+      street:data.street,
+      building:data.building,
+      houseNumber:data.houseNumber,
+      pinCode:data.pinCode,
+    }
+    const{profile} =await axios.put("",profileData);
+    toast(profile.message, { type: "success" });
+    setData({
+      name: "",
+      email: "",
+      phoneNumber: "",
+      userType: "",
+      state: "",
+      city: "",
+      street: "",
+      building: "",
+      houseNumber: "",
+      pinCode: "",
+    })
+   } catch (error) {
+    toast(error.response.profile.message, { type: "error" });
+   } 
   }
   return (
     <>

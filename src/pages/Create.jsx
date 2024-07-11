@@ -82,7 +82,7 @@ const Create = () => {
             onChange={handleChange}
           />
         </div>
-        <div className="border h-20 w-[600px] rounded-md"></div>
+        <div className="border h-20 w-[600px] rounded-md border-red-800"></div>
         <button className="bg-green-600 text-white py-1 px-10 rounded-md" onClick={handleSubmit}>
           Submit
         </button>

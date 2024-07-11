@@ -17,7 +17,7 @@ const Register = () => {
     const { name, value } = e.target;
     setRegisterData({ ...registerData, [name]: value });
   };
-  const handleRegister = (e) => {
+  const handleRegister = async (e) => {
     e.preventDefault();
 
     try {
@@ -27,11 +27,11 @@ const Register = () => {
         password: registerData.password,
       };
 
-      const { data } = axios.post(
+      const { data } =await axios.post(
         "http://localhost:3000/api/users/register",
         formData
       );
-      toast(data.message);
+      toast(data.message, { type: "success" });
       setRegisterData({
         name: "",
         email: "",
@@ -39,7 +39,7 @@ const Register = () => {
         repeatPassword: "",
       });
     } catch (error) {
-      toast(error.response.data.message);
+      toast(error.response.data.message, { type: "error" });
     }
   };
 
